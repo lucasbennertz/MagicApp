@@ -5,6 +5,19 @@ class PhotoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final children = Scaffold(
+      body: Image.asset(
+          "assets/tela_photos.png",
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
+      ),
+    );
+    return GestureDetector(
+      onTap: _openGallery,
+      child: children,
+    );
   }
 }
+_openGallery(){}
+
